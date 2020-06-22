@@ -8,7 +8,10 @@
 
 <body>
   <script>
-    const numberLengthCalculator = new NumberLengthCalculator(666)
+    const numberLengthCalculator = new NumberLengthCalculator()
+
+    const totalNumberOfLetters = numberLengthCalculator.calculateNumberOfLettersInWrittenNumbersBetween(1, 1000)
+    console.log(`The total number of letters is ${totalNumberOfLetters}`)
   </script>
 </body>
 
