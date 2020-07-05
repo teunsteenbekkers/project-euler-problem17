@@ -2,17 +2,40 @@
 <html>
 
 <head>
-  <title>Written number character calculator</title>
+  <title>Problem 17 - Number letter counts</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="calculate_number_length.js"></script>
 </head>
 
 <body>
-  <script>
-    const numberLengthCalculator = new NumberLengthCalculator()
+  <div class="pure-g">
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-2">
+      <h1>Problem 17 - Number letter counts</h1>
+      <p>If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 =
+        19
+        letters used in total.</p>
 
-    const totalNumberOfLetters = numberLengthCalculator.calculateNumberOfLettersInWrittenNumbersBetween(1, 1000)
-    console.log(`The total number of letters is ${totalNumberOfLetters}`)
-  </script>
+      <h3>If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would
+        be
+        used?</h3>
+      <p><small>NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters
+          and
+          115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance
+          with
+          British usage.</small></p>
+      <hr>
+      <h2>The solution is: <span id="solution">?</span></h2>
+    </div>
+    <div class="pure-u-1-4"></div>
+    <script>
+      const numberLengthCalculator = new NumberLengthCalculator()
+
+      const totalNumberOfLetters = numberLengthCalculator.calculateNumberOfLettersInWrittenNumbersBetween(1, 1000)
+      document.getElementById('solution').innerText = `${totalNumberOfLetters}`
+    </script>
 </body>
 
 </html>
